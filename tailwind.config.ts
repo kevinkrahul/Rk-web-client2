@@ -10,12 +10,13 @@ export default {
   theme: {
   	extend: {
 		backgroundImage: {
-        'header-grad': 'linear-gradient(to right, #fa709a 0%, #fee140 100%)',
-		bag:'linear-gradient(to right, #ffc0cb 0%, #fff7b2 100%)',
-      
+        'header-grad': 'linear-gradient(to right, #f83600 0%, #f9d423 100%)',
+		'bag':'linear-gradient(to right, #ff9a66 0%, #fff2a6 100%)',
+		'bag-fade': `linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%), linear-gradient(to right, #ff9a66 0%, #fff2a6 100%)`,
 	},
   		colors: {
 			shade:"#f83600",
+			logo:"#FF6F47",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -64,5 +65,20 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	require("tailwindcss-animate"),
+	function ({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
+	  addUtilities({
+		'.text-header-grad': {
+		  backgroundImage: 'linear-gradient(to right, #f83600 50%, #f9d423 100%)',
+		  backgroundClip: 'text',
+		  color: 'transparent',
+		  WebkitBackgroundClip: 'text',
+		  WebkitTextFillColor: 'transparent',
+		},
+	  })
+	},
+
+
+  ],
 } satisfies Config;

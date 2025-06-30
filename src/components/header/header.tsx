@@ -26,7 +26,7 @@ import {
 const SHEET_SIDES = ["left"] as const;
 
 
-export const Navigation = ["Home", "About", "Product", "Contact"];
+export const Navigation = ["HOME", "ABOUT", "PRODUCT", "CONTACT"];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -47,8 +47,8 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 w-full z-50 p-4 flex justify-center items-center ${
-        scrolled ? "bg-header-grad" : "bg-background"
+      className={`sticky top-0 w-full z-50 p-4 md:pt-1 md:pb-0 flex justify-center items-center ${
+        scrolled ? "bg-bag-fade" : "bg-background"
       }`}
     >
       <a className="mr-2 md:hidden">
@@ -118,8 +118,12 @@ const Header = () => {
         </div>
       </a>
 
-      <Link href="/" className="w-full justify-start items-center">
-          <Image src={rasilogo} alt={"Rasi logo"} width={90} height={60} />
+      <Link href="/" className="w-full flex justify-start">
+          <div className=" lg:ml-9 flex flex-col items-center justify-center">
+              <Image src={rasilogo} alt={"Rasi logo"} width={100} height={100} />
+              <span className="hidden lg:text-[11px] text-xs font-sans text-logo md:block">Rasi Kitchen Equipments</span>
+              {/* <span className="hidden lg:text-sm text-xs text-header-grad font-normal md:block">Rasi Kitchen Equipments</span> */}
+          </div>
       </Link>
       <NavigationMenu className="hidden md:block">
         <NavigationMenuList className="gap-6">
@@ -134,7 +138,7 @@ const Header = () => {
                 
                 passHref
               >
-                <NavigationMenuLink asChild>
+                <NavigationMenuLink asChild className="bg-transparent text-lg font-medium hover:text-header-grad">
                   <span className={navigationMenuTriggerStyle()}>{items}</span>
                 </NavigationMenuLink>
               </Link>
@@ -142,7 +146,7 @@ const Header = () => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <aside className="flex w-full justify-end ">
+      <aside className="flex w-[40vw] lg:w-full  justify-end">
       </aside>
     </header>
   );
