@@ -11,8 +11,11 @@ export default {
   	extend: {
 		backgroundImage: {
         'header-grad': 'linear-gradient(to right, #fa709a 0%, #fee140 100%)',
-      },
+		bag:'linear-gradient(to right, #ffc0cb 0%, #fff7b2 100%)',
+      
+	},
   		colors: {
+			shade:"#f83600",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
