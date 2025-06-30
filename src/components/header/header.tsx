@@ -131,11 +131,11 @@ const Header = () => {
                     ? "/"
                     : `/${items.toLowerCase()}`
                 }
-                legacyBehavior
+                
                 passHref
               >
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  {items}
+                <NavigationMenuLink asChild>
+                  <span className={navigationMenuTriggerStyle()}>{items}</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
