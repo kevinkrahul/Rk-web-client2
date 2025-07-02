@@ -10,13 +10,19 @@ export default {
   theme: {
   	extend: {
 		backgroundImage: {
-        'header-grad': 'linear-gradient(to right, #f83600 0%, #f9d423 100%)',
+		'rad-bag':'radial-gradient(circle,rgba(255, 255, 255, 1) 10%, rgba(255, 241, 235, 1) 50%, rgba(255, 255, 235, 1) 100%);',
+        'lin-bag':'linear-gradient(115deg,rgba(255, 255, 255, 1) 10%, rgba(255, 241, 235, 1) 50%, rgba(255, 255, 235, 1) 100%);',
+		'header-grad': 'linear-gradient(to right, #f83600 0%, #f9d423 100%)',
 		'bag':'linear-gradient(to right, #ff9a66 0%, #fff2a6 100%)',
 		'bag-fade': `linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%), linear-gradient(to right, #ff9a66 0%, #fff2a6 100%)`,
 	},
   		colors: {
 			shade:"#f83600",
 			logo:"#FF6F47",
+			bgyellowshade:"#ffffeb",
+			yellowmildshade:"#ffffd8",
+			orangemildshade:"#fff1eb",
+			bgorangeshade:"#ffd6c4",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -62,7 +68,18 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		keyframes: {
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      animation: {
+        gradient: 'gradient 8s linear infinite'
+      },
+
   	}
   },
   plugins: [

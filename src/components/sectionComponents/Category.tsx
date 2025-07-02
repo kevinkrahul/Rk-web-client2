@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ElementVisiblity } from "@/app/services/ElementVisibility";
 import Image from "next/image";
 
-export default function FeaturesSectionDemo() {
+export default function CategorySectionDemo() {
   const features = [
     {
       title: "Burner",
@@ -236,7 +236,7 @@ export default function FeaturesSectionDemo() {
   return (
     <>
       <div className="flex justify-center  items-center">
-        <div className="grid grid-cols-2 col-span-full md:grid-cols-3 lg:grid-cols-4 relative z-10 py:10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 col-span-full md:grid-cols-3 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <Feature key={feature.title} {...feature} index={index} />
           ))}
