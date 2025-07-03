@@ -106,14 +106,16 @@ const ProductList = () => {
     <div>
       {Header.map((data, index) => (
         <div
-          className={`my-10 py-10 ${index % 2 === 0 ?"bg-white" :"bg-lin-bag"}`}
+          className={`lg:my-5 py-5 lg:py-8 ${
+            index % 2 === 0 ? "bg-white" : "bg-lin-bag"
+          }`}
           key={index}
           id={slugify(data)}
           ref={sectionRefs[slugify(data)]}
         >
           <h1
             className="flex flex-col justify-center items-center font-medium p-1"
-            style={{ fontSize: "clamp(20px, 2vw, 25px)" }}
+            style={{ fontSize: "clamp(30px, 5vw, 35px)" }}
           >
             <GradientText
               colors={[
@@ -123,15 +125,15 @@ const ProductList = () => {
                 "#3A3A3A", // neutral dark gray
                 // "#DBB706", // gold-like transition (optional highlight)
                 "#2E2E2E", // very dark gray
-              ]} className="text-4xl"
+              ]}
               animationSpeed={4}
             >
               {data}
             </GradientText>
           </h1>
 
-          <div className=" mt-8 flex justify-center">
-            <div className="grid lg:w-[80%] h-auto w-[90%] md:grid-cols-3 xl:grid-cols-5 p-4 gap-4">
+          <div className=" md:mt-4 flex justify-center">
+            <div className="grid lg:w-[80%] xl:w-[95%] 2xl:w-[85%] h-auto w-[95%] md:grid-cols-3 xl:grid-cols-5 p-4 gap-4">
               {productData.map(
                 (product, proindex) =>
                   product.header === data && (

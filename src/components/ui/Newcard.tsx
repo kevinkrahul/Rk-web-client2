@@ -14,7 +14,7 @@ const Card = ({ image, title }: cardProps) => {
   return (
     <div
       className={clsx(
-        "relative max-w-56 w-full h-72 rounded-sm cursor-pointer mx-auto",
+        "relative max-w-80 w-full xxs:h-80 xxs:w-64 xs:w-80 xs:h-96 md:h-72 md:w-56 lg:w-64 lg:h-80 rounded-sm cursor-pointer mx-auto",
         "bg-orange-700/5 backdrop-blur-lg border border-orange-700/10",
         " active:scale-[0.98] hover:shadow-2xl transition-all duration-300 cursor-pointer",
         "flex items-center justify-center px-2 pt-2 pb-[3.4em] group/card",
@@ -52,7 +52,7 @@ const Card = ({ image, title }: cardProps) => {
         <Image
           src={img}
           alt="Product Image"
-          className="w-full h-60 object-fill rounded-md"
+          className="w-full md:h-[238px] xxs:h-[268px] xs:h-[332px] lg:h-[270px] object-fill rounded-md"
         />
         {/* <span className="max-w-[55px] text-sm text-black">This is a chair.</span> */}
       </div>

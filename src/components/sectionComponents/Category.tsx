@@ -15,6 +15,7 @@ export default function CategorySectionDemo() {
           fill="neutral"
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 490 490"
           xmlSpace="preserve"
         >
@@ -32,6 +33,7 @@ export default function CategorySectionDemo() {
           fill="neutral"
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 59 59"
           xmlSpace="preserve"
         >
@@ -48,6 +50,7 @@ export default function CategorySectionDemo() {
           width={50}
           height={50}
           viewBox="0 0 490 490"
+          className="2xl:w-20 2xl:h-20"
           xmlSpace="preserve"
         >
           <path d="M479.792 342.288H187.338V234.104l-65.547-56.934H67.759V96.132a10.21 10.21 0 0 0-3.688-7.856L16.727 49.017c-4.356-3.609-10.786-2.99-14.375 1.336-3.598 4.347-3 10.777 1.336 14.375l43.654 36.198v251.569a10.2 10.2 0 0 0 10.208 10.208h60.189a50.26 50.26 0 0 0-9.974 30.108c0 27.863 22.66 50.523 50.523 50.523s50.523-22.66 50.523-50.523a50.27 50.27 0 0 0-9.974-30.108h139.668a50.26 50.26 0 0 0-9.974 30.108c0 27.863 22.66 50.523 50.523 50.523s50.523-22.66 50.523-50.523a50.27 50.27 0 0 0-9.974-30.108h60.188a10.2 10.2 0 0 0 10.208-10.208 10.2 10.2 0 0 0-10.207-10.207M67.759 197.587h46.397l52.766 45.829v98.873H67.759zm120.636 195.226c0 16.598-13.508 30.106-30.106 30.106s-30.107-13.509-30.107-30.106c0-16.599 13.508-30.108 30.107-30.108 16.598 0 30.106 13.509 30.106 30.108m220.766 0c0 16.598-13.508 30.106-30.107 30.106s-30.107-13.509-30.107-30.106c0-16.599 13.508-30.108 30.107-30.108s30.107 13.509 30.107 30.108" />
@@ -62,6 +65,7 @@ export default function CategorySectionDemo() {
           width={50}
           height={50}
           stroke="black"
+          className="2xl:w-20 2xl:h-20"
           strokeWidth={2}
           fill="background"
           viewBox="0 0 50 50"
@@ -81,6 +85,7 @@ export default function CategorySectionDemo() {
           xmlns="http://www.w3.org/2000/svg"
           fill="black"
           width={50}
+          className="2xl:w-20 2xl:h-20"
           height={50}
           viewBox="0 0 545.062 545.062"
           xmlSpace="preserve"
@@ -99,6 +104,7 @@ export default function CategorySectionDemo() {
           xmlns="http://www.w3.org/2000/svg"
           stroke="black"
           strokeWidth={6}
+          className="2xl:w-20 2xl:h-20"
           fill="background"
           width={50}
           height={50}
@@ -115,6 +121,7 @@ export default function CategorySectionDemo() {
         <svg
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           fill="black"
           viewBox="0 0 128 128"
           xmlns="http://www.w3.org/2000/svg"
@@ -133,6 +140,7 @@ export default function CategorySectionDemo() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={50}
+          className="2xl:w-20 2xl:h-20"
           height={50}
           viewBox="0 0 463 463"
           xmlSpace="preserve"
@@ -149,6 +157,7 @@ export default function CategorySectionDemo() {
           xmlns="http://www.w3.org/2000/svg"
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 417.462 417.462"
         >
           <path d="M104.376 259.673c-20.475 0-37.132 16.658-37.132 37.132s16.657 37.132 37.132 37.132 37.132-16.657 37.132-37.132-16.657-37.132-37.132-37.132m0 59.264c-12.203 0-22.132-9.928-22.132-22.132s9.929-22.132 22.132-22.132 22.132 9.929 22.132 22.132-9.929 22.132-22.132 22.132m72.399-34.593c-13.673 0-24.797 11.124-24.797 24.797s11.124 24.796 24.797 24.796 24.797-11.124 24.797-24.796-11.124-24.797-24.797-24.797m0 34.593c-5.402 0-9.797-4.395-9.797-9.796s4.395-9.797 9.797-9.797 9.797 4.395 9.797 9.797-4.394 9.796-9.797 9.796" />
@@ -164,6 +173,7 @@ export default function CategorySectionDemo() {
           xmlns="http://www.w3.org/2000/svg"
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 60 60"
           xmlSpace="preserve"
         >
@@ -179,6 +189,7 @@ export default function CategorySectionDemo() {
           xmlns="http://www.w3.org/2000/svg"
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 512 512"
           xmlSpace="preserve"
         >
@@ -192,6 +203,7 @@ export default function CategorySectionDemo() {
         <svg
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -206,6 +218,7 @@ export default function CategorySectionDemo() {
           xmlns="http://www.w3.org/2000/svg"
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 512 512"
           xmlSpace="preserve"
         >
@@ -220,6 +233,7 @@ export default function CategorySectionDemo() {
         <svg
           width={50}
           height={50}
+          className="2xl:w-20 2xl:h-20"
           viewBox="0 0 32 32"
           xmlSpace="preserve"
           xmlns="http://www.w3.org/2000/svg"
@@ -283,10 +297,14 @@ const Feature = ({
         {index >= 7 && (
           <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-shade/[.2] to-transparent pointer-events-none" />
         )}
-        <div className="mb-4 relative z-10 px-10 ">{icon}</div>
+        <div className="mb-4 relative z-10 px-10 ">
+          <div className="">
+          {icon}
+          </div>
+        </div>
         <div className="text-sm font-sans font-medium mb-1 relative z-10 px-10">
           <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-brand_yellow transition-all duration-200 origin-center" />
-          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100">
+          <span className="xl:text-lg  group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100">
             {title}
           </span>
         </div>

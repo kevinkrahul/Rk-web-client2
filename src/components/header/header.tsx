@@ -90,12 +90,12 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side={side}>
                 <SheetHeader>
-                  <SheetTitle>Kv Mahal</SheetTitle>
+                  <SheetTitle>Rasi Kitchen Equipments</SheetTitle>
                   <SheetDescription>
-                    We are welcome you to make your day special
+                    Explore our products and services
                   </SheetDescription>
                 </SheetHeader>
-                <div>
+                <div className=" mt-5">
                   {Navigation.map((item, index) => (
                     <div key={index}>
                       <SheetClose asChild>

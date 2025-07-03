@@ -79,6 +79,10 @@ export default {
       animation: {
         gradient: 'gradient 8s linear infinite'
       },
+	  screens:{
+		'xxs': '320px',
+		'xs': '375px',
+	  }
 
   	}
   },
