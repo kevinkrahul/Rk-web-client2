@@ -1,31 +1,36 @@
 "use client";
-
+import type { StaticImageData } from 'next/image';
 import React from "react";
 import clsx from "clsx";
 import img from "../../../public/image.png"; // Adjust the path as necessary
 import Image from "next/image";
-import { TypewriterEffect } from "./underLineText"; // Adjust the import path as necessary
-const Card = () => {
+import ProductButton from "./ProductTitle"; // Adjust the import path as necessary
+interface cardProps {
+  image: StaticImageData;
+  title: string;
+}
+
+const Card = ({ image, title }: cardProps) => {
   return (
     <div
       className={clsx(
-  "relative max-w-56 w-full h-72 rounded-sm cursor-pointer mx-auto",
-  "bg-black/10 backdrop-blur-lg border border-white/30 shadow-inner",
-  "hover:shadow-[0_0_4px_4px_rgba(0,0,0,0.1)] active:scale-[0.98]",
-  "flex items-center justify-center px-2 pt-2 pb-[3.4em] group/card",
-  "transition-all duration-300 ease-in-out"
-)}
+        "relative max-w-56 w-full h-72 rounded-sm cursor-pointer mx-auto",
+        "bg-black/10 backdrop-blur-lg border border-white/30 shadow-inner",
+        "hover:shadow-[0_0_4px_4px_rgba(0,0,0,0.1)] active:scale-[0.98]",
+        "flex items-center justify-center px-2 pt-2 pb-[3.4em] group/card",
+        "transition-all duration-300 ease-in-out"
+      )}
     >
       {/* Add to Cart / Added! */}
       <div
         className={clsx(
-  "absolute left-0 bottom-0 w-full h-8 rounded-sm flex items-center justify-center gap-1",
-  "text-black text-[0.75rem] font-semibold uppercase",
-  "bg-bgorangeshade backdrop-blur-3xl",
-  "opacity-0 translate-y-4 pointer-events-none",
-  "transition-all duration-300 ease-out",
-  "group-hover/card:opacity-100 group-hover/card:translate-y-0 group-hover/card:pointer-events-auto"
-)}
+          "absolute left-0 bottom-0 w-full h-8 rounded-sm flex items-center justify-center gap-1",
+          "text-black text-[0.75rem] font-semibold uppercase",
+          "bg-bgorangeshade backdrop-blur-3xl",
+          "opacity-0 translate-y-4 pointer-events-none",
+          "transition-all duration-300 ease-out",
+          "group-hover/card:opacity-100 group-hover/card:translate-y-0 group-hover/card:pointer-events-auto"
+        )}
       >
         Specification
         <svg
@@ -53,13 +58,13 @@ const Card = () => {
       </div>
 
       {/* Title */}
-      <span className={clsx("absolute bottom-[1%] opacity-100 transition-opacity ease-in-out"," group-hover/card:opacity-0 group-hover/card:duration-0 duration-700")}>
-        <TypewriterEffect
-          words={[
-            { text: "Gas", className: "text-black font-medium text-xl" },
-            { text: "Burner", className: "text-black text-xl font-medium" },
-          ]}
-        />
+      <span
+        className={clsx(
+          "absolute bottom-[1%] opacity-100 transition-opacity ease-in-out",
+          " group-hover/card:opacity-0 group-hover/card:duration-0 duration-700"
+        )}
+      >
+        <ProductButton title={title} />
       </span>
     </div>
   );

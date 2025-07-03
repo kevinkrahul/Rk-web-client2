@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ElementVisiblity } from "@/app/services/ElementVisibility";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CategorySectionDemo() {
   const features = [
@@ -24,7 +25,7 @@ export default function CategorySectionDemo() {
       ),
     },
     {
-      title: "Dishwasher",
+      title: "Washing Sink",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -233,12 +234,17 @@ export default function CategorySectionDemo() {
     //   icon: <Image src={Logo} alt="Creative Powerhouse" />,
     // },
   ];
+
+  const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <>
       <div className="flex justify-center  items-center">
         <div className="grid grid-cols-2 col-span-full md:grid-cols-3 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <Feature key={feature.title} {...feature} index={index} />
+            <Link href={`/product#${slugify(feature.title)}`} key={index}>
+              <Feature key={feature.title} {...feature} index={index} />
+            </Link>
           ))}
         </div>
       </div>
@@ -266,17 +272,17 @@ const Feature = ({
         transition={{ duration: 0.5, delay: index * 0.1 }}
         className={cn(
           "flex flex-col md:border-r py-4 relative group/feature",
-          (index % 4 === 0) && "lg:border-l",(index % 3 === 0) && "md:border-l" ,
+          index % 4 === 0 && "lg:border-l",
+          index % 3 === 0 && "md:border-l",
           index < 12 && "md:border-b "
         )}
       >
         {index < 7 && (
-              <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-shade/[.2] to-transparent pointer-events-none" />
-            )}
-            {index >= 7 && (
-              <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-shade/[.2] to-transparent pointer-events-none" />
-            )
-        }
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-shade/[.2] to-transparent pointer-events-none" />
+        )}
+        {index >= 7 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-shade/[.2] to-transparent pointer-events-none" />
+        )}
         <div className="mb-4 relative z-10 px-10 ">{icon}</div>
         <div className="text-sm font-sans font-medium mb-1 relative z-10 px-10">
           <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-brand_yellow transition-all duration-200 origin-center" />
