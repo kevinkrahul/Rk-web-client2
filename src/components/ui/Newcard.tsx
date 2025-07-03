@@ -15,8 +15,8 @@ const Card = ({ image, title }: cardProps) => {
     <div
       className={clsx(
         "relative max-w-56 w-full h-72 rounded-sm cursor-pointer mx-auto",
-        "bg-black/10 backdrop-blur-lg border border-white/30 shadow-inner",
-        "hover:shadow-[0_0_4px_4px_rgba(0,0,0,0.1)] active:scale-[0.98]",
+        "bg-orange-700/5 backdrop-blur-lg border border-orange-700/10",
+        " active:scale-[0.98] hover:shadow-2xl transition-all duration-300 cursor-pointer",
         "flex items-center justify-center px-2 pt-2 pb-[3.4em] group/card",
         "transition-all duration-300 ease-in-out"
       )}
@@ -24,7 +24,7 @@ const Card = ({ image, title }: cardProps) => {
       {/* Add to Cart / Added! */}
       <div
         className={clsx(
-          "absolute left-0 bottom-0 w-full h-8 rounded-sm flex items-center justify-center gap-1",
+          "absolute text-orange-700 left-0 bottom-0 w-full h-8 rounded-sm flex items-center justify-center gap-1",
           "text-black text-[0.75rem] font-semibold uppercase",
           "bg-bgorangeshade backdrop-blur-3xl",
           "opacity-0 translate-y-4 pointer-events-none",
@@ -48,7 +48,7 @@ const Card = ({ image, title }: cardProps) => {
       </div>
 
       {/* Image block with zoom on hover */}
-      <div className="w-full h-full grid place-items-center transition-transform duration-300 group-hover/card:scale-105">
+      <div className="w-full h-full rounded-r-md border border-orange-50 grid place-items-center transition-transform duration-300 group-hover/card:scale-105">
         <Image
           src={img}
           alt="Product Image"

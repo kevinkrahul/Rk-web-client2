@@ -3,9 +3,9 @@ import ProductList from "@/components/ProductList/productList";
 
 const page = () => {
   return (
-    <section className="justify-center bg-yellow-50/25 items-center w-full h-auto">
+    <section className="justify-center bg-white items-center w-full h-auto">
       <h1
-        className="font-medium bg-slate-500 text-center p-3"
+        className="font-medium text-orange-900 bg-lin-bag text-center p-3"
         style={{ fontSize: "clamp(35px, 3vw, 60px)" }}
       >
         Our Products

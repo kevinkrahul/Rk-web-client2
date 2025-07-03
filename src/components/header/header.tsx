@@ -47,8 +47,8 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 w-full z-50 p-4 md:pt-1 md:pb-0 flex justify-center items-center ${
-        scrolled ? "bg-bag-fade" : "bg-background"
+      className={`sticky top-0 w-full border border-b z-50 p-4 md:pt-1 md:pb-3 flex justify-center items-center ${
+        scrolled ? "bg-bag-fade shadow-md" : "bg-background"
       }`}
     >
       <a className="mr-2 md:hidden">

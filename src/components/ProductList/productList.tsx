@@ -90,24 +90,23 @@ const ProductList = () => {
   }, {} as Record<string, React.RefObject<HTMLDivElement | null>>);
 
   useEffect(() => {
-  const hash = window.location.hash.replace('#', '');
-  const targetRef = sectionRefs[hash];
-  if (targetRef?.current) {
-    targetRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+    const hash = window.location.hash.replace("#", "");
+    const targetRef = sectionRefs[hash];
+    if (targetRef?.current) {
+      targetRef.current.scrollIntoView({ behavior: "auto", block: "start" });
 
-    // Optional: adjust position if sticky header overlaps
-    setTimeout(() => {
-      window.scrollBy({ top: -80, behavior: 'smooth' }); // adjust -80 to match your header height
-    }, 100);
-  }
-}, []);
-
+      // Optional: adjust position if sticky header overlaps
+      setTimeout(() => {
+        window.scrollBy({ top: -80, behavior: "smooth" }); // adjust -80 to match your header height
+      }, 100);
+    }
+  }, []);
 
   return (
     <div>
       {Header.map((data, index) => (
         <div
-          className="py-10"
+          className={`my-10 py-10 ${index % 2 === 0 ?"bg-white" :"bg-lin-bag"}`}
           key={index}
           id={slugify(data)}
           ref={sectionRefs[slugify(data)]}
@@ -118,20 +117,20 @@ const ProductList = () => {
           >
             <GradientText
               colors={[
-                "#B82800",
-                "#f83600",
-                "#f9d423",
-                "#DBB706",
-                "#f83600",
-                "#B82800",
-              ]}
+                "#B82800", // dark burnt orange
+                // "#5C5C5C", // medium-dark gray
+                "#f83600", // vivid orange-red
+                "#3A3A3A", // neutral dark gray
+                // "#DBB706", // gold-like transition (optional highlight)
+                "#2E2E2E", // very dark gray
+              ]} className="text-4xl"
               animationSpeed={4}
             >
               {data}
             </GradientText>
           </h1>
 
-          <div className="flex justify-center">
+          <div className=" mt-8 flex justify-center">
             <div className="grid lg:w-[80%] h-auto w-[90%] md:grid-cols-3 xl:grid-cols-5 p-4 gap-4">
               {productData.map(
                 (product, proindex) =>
