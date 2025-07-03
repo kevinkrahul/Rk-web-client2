@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ElementVisiblity } from "@/app/services/ElementVisibility";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function CategorySectionDemo() {

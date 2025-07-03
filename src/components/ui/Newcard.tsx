@@ -1,10 +1,9 @@
 "use client";
-import type { StaticImageData } from 'next/image';
+import type { StaticImageData } from "next/image";
 import React from "react";
 import clsx from "clsx";
-import img from "../../../public/image.png"; // Adjust the path as necessary
 import Image from "next/image";
-import ProductButton from "./ProductTitle"; // Adjust the import path as necessary
+import ProductButton from "./ProductTitle";
 interface cardProps {
   image: StaticImageData;
   title: string;
@@ -50,7 +49,7 @@ const Card = ({ image, title }: cardProps) => {
       {/* Image block with zoom on hover */}
       <div className="w-full h-full rounded-r-md border border-orange-50 grid place-items-center transition-transform duration-300 group-hover/card:scale-105">
         <Image
-          src={img}
+          src={image}
           alt="Product Image"
           className="w-full md:h-[238px] xxs:h-[268px] xs:h-[332px] lg:h-[270px] object-fill rounded-md"
         />
