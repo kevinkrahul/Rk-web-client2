@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo } from "react";
 import Card from "@/components/ui/Newcard";
 import GradientText from "@/components/ui/shinyext";
 // import img from "../../../public/image.png";
@@ -116,11 +116,13 @@ const productData = [
 const ProductList = () => {
   const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
-  const sectionRefs = Header.reduce((acc, name) => {
+  const sectionRefs = useMemo(() => {
+  return Header.reduce((acc, name) => {
     const slug = slugify(name);
-    acc[slug] = useRef<HTMLDivElement>(null);
+    acc[slug] = React.createRef<HTMLDivElement>();
     return acc;
   }, {} as Record<string, React.RefObject<HTMLDivElement | null>>);
+}, []);
 
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
@@ -133,7 +135,7 @@ const ProductList = () => {
         window.scrollBy({ top: -80, behavior: "smooth" }); // adjust -80 to match your header height
       }, 100);
     }
-  }, []);
+  }, [sectionRefs]);
 
   return (
     <div>
